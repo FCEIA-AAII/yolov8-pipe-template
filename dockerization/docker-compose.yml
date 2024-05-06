@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  gradio:
+    build:
+      context: ../
+      dockerfile: dockerization/Dockerfile
+    working_dir: /workspace
+    command: python3 yolo-deploy.py
+    volumes:
+      - ../:/workspace
+    network_mode: "host"
+    restart: unless-stopped
+    user: "${UID}:${GID}"

@@ -1,0 +1,8 @@
+path: ../dataset
+train: train/images
+val: valid/images
+
+# Classes
+names:
+  0: 'white-piece'
+  1: 'black-piece'
